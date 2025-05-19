@@ -1,0 +1,41 @@
+# Base image avec Node.js et TypeScript
+FROM mcr.microsoft.com/devcontainers/typescript-node:latest
+
+# Définir le répertoire de travail
+WORKDIR /workspace
+
+# Copier le package.json et le package-lock.json (si présent)
+COPY package*.json ./
+
+# Installation des dépendances
+RUN npm install
+
+# Copier le reste du code
+COPY . .
+
+# Compiler le TypeScript
+RUN npx tsc
+
+# Exposer le port de l'application (à adapter si besoin)
+EXPOSE 3000
+
+# Commande de démarrage
+CMD ["node", "dist/index.js"]
+
+
+
+Importe les leads
+curl -X POST "https://api.staging.pinpo.space/v1/lead" ^
+  -H "Api-key: 8kV3S3qe2FMl4HPo9tt7A4Psni9ZzkX948tKMh80" ^
+  -H "accept: */*" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"contact\":{\"firstName\":\"John\",\"lastName\":\"Doe\",\"phone\":\"33606060606\",\"mail\":\"john.doe@email.fr\",\"externalId\":\"abcd1234\"},\"externalId\":\"efghi56789\",\"providerName\":\"Facebook leads\",\"scenarioSelection\":\"nGcEq0bPJJ\",\"product\":{\"name\":\"Ream of paper\"},\"salesPerson\":{\"firstName\":\"Michael\",\"lastName\":\"Scott\",\"phone\":\"33707070707\",\"mail\":\"michael.scott@corporation.fr\"},\"scriptData\":[{\"name\":\"location\",\"value\":\"Scraton\"}]}"
+
+curl -X POST "https://webhook.site/f8b4a362-7bd5-4711-9033-f1725286742e" -H "Content-Type: application/json" -d "{\"id\":7,\"name\":\"Jack Daniels\",\"position\":\"Assistant\"}"
+
+
+curl -X POST "https://api.pinpo.com/v1/mock" ^
+  -H "Api-key: 8kV3S3qe2FMl4HPo9tt7A4Psni9ZzkX948tKMh80" ^
+  -H "accept: */*" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"typeLead\":\"hot-with-meeting\",\"url\":\"https://webhook.site/f8b4a362-7bd5-4711-9033-f1725286742e\",\"hasEmoji\":true,\"typeDisplay\":\"html\"}"
