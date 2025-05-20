@@ -39,7 +39,8 @@ Lors du premier démarrage, et votre premiere connexion, il vous sera demandé d
 La clé API: Fournit par Pinpo, qui vous permet d'accèder à l'API de PINPO (Lien de la documentation(https://docs.pinpo.ai))
 
 Le numéro de scénario : Fournit par Pinpo. Ce numéro est un ID pour chaque scénario que vous avez configuré.
-(Attention: Le premier scénario est celui par défaut, vous pouvez le modifier ultérieurement où en ajouter différent, si vous avez différentes intérogation veuillez contacter votre CX)
+
+(Attention: Le premier scénario est celui par défaut, vous pouvez le modifier ultérieurement ou en ajouter, si vous avez différentes intérogation veuillez contacter votre CX)
 
 L'URL pour le webhook subscription de PINPO: Information que vous avez envoyé à pinpo, Si ce n'est pas fait alors veuille le communiquer le plus tôt possible à votre CX.
 Cette information vous permettra de recevoir les informations par rapport aux différents leads en cours.
