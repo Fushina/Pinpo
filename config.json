@@ -1,8 +1,8 @@
 {
   "env": {
-    "apikey": "8kV3S3qe2FMl4HPo9tt7A4Psni9ZzkX948tKMh80",
-    "scenario": "nGcEq0bPJJ",
-    "endpoint": "https://f608-2a01-cb04-f0c-be00-a1c0-70d9-6734-ee23.ngrok-free.app/webhook",
+    "apikey": undefined,
+    "scenario": undefined,
+    "endpoint": undefined,
     "twilio": {
       "accountSid": "AC6f4df0a20facfdca651c8256fa18e3b3",
       "authToken": "d5116fa86e54aa70c310bd01f5790823",
