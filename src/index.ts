@@ -138,6 +138,7 @@ app.post('/sendLead', express.urlencoded({ extended: true }), (req, res) => {
 });
 app.post('/webhook', (req, res) => {
     console.log('Webhook reçu !');
+    console.log(req.body);
     res.status(200).send('Webhook reçu !');
 });
 app.listen(port, () => {
