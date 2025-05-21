@@ -27,7 +27,7 @@ Pinpo est un projet d'intégration d'API en TypeScript permettant l'import de le
 3. Démarrez le conteneur Docker :
 Attention: Pour faciliter l'intégration et le dévellopement nous avons décidez de hoisir de monter le dossier Pinpo dans le docker.
 
-Pour ce faire et jusqu'à la fin de la procédure ${PWD} est votre chemin du dossier Git que vous venez de push.
+Pour ce faire et jusqu'à la fin de la procédure ${PWD} est votre chemin du dossier Git que vous venez de pull.
    ```bash
    docker run -d -p 3000:3000 -v ${PWD}:/workspace pinpo-app
    ```
